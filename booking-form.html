@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JAJABOR</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/pattern.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    
+    
+    </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-primary fs-4" href="#">Jajabor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="vehiclesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Vehicles
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="vehiclesDropdown">
+                            <li><a class="dropdown-item" href="#">Cars</a></li>
+                            <li><a class="dropdown-item" href="#">Bikes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rental Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Booking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary ms-lg-3" href="#">Login / Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="rent-form-section" id="rent-form">
+        <div class="container">
+          <div class="form-heading">
+            <h2>Book Your Ride</h2>
+            <p>Fill the form below to rent your preferred car or bike easily!</p>
+          </div>
+      
+          <form class="rent-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+              </div>
+      
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+              </div>
+            </div>
+      
+            <div class="form-row">
+              <div class="form-group">
+                <label for="vehicle">Vehicle Type</label>
+                <select id="vehicle" onchange="updateVehicleNames()" required>
+                  <option value="">Select Vehicle</option>
+                  <option value="car">Car</option>
+                  <option value="bike">Bike</option>
+                </select>
+              </div>
+      
+              <div class="form-group">
+                <label for="vehicle-name">Vehicle Name</label>
+                <select id="vehicle-name" required>
+                  <option value="">Select Vehicle Name</option>
+                </select>
+              </div>
+            </div>
+      
+            <div class="form-row">
+              <div class="form-group">
+                <label for="location">Pickup Location</label>
+                <input type="text" id="location" placeholder="Enter pickup location" required>
+              </div>
+      
+              <div class="form-group">
+                <label for="persons">Number of Persons</label>
+                <input type="number" id="persons" placeholder="Enter number of persons" min="1" max="10" required>
+              </div>
+            </div>
+      
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pickup-date">Pickup Date</label>
+                <input type="date" id="pickup-date" required>
+              </div>
+      
+              <div class="form-group">
+                <label for="return-date">Return Date</label>
+                <input type="date" id="return-date" required>
+              </div>
+            </div>
+      
+            <div class="form-submit">
+              <button type="submit" class="btn-submit">Book Now</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-md-6 col-lg-4">
+              <div class="widget1">
+                <h4 style="color:#fff">About Jajabor</h4>
+                <p>
+                  Jajabor is Northeast India's trusted car and bike rental service. Whether you seek scenic road trips or quick urban rides, we ensure affordable, safe, and reliable vehicles to make every journey unforgettable.
+                </p>
+                <div class="socialLinks">
+                  <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-6 col-lg-4">
+              <div class="widget3">
+                <h5>Quick Links</h5>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Fleet</a></li>
+                  <li><a href="#">Pricing</a></li>
+                  <li><a href="#">FAQs</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="col-sm-6 col-lg-2">
+              <div class="widget4">
+                <h5>Popular Locations</h5>
+                <ul>
+                  <li><a href="#">Guwahati</a></li>
+                  <li><a href="#">Shillong</a></li>
+                  <li><a href="#">Tawang</a></li>
+                  <li><a href="#">Kaziranga</a></li>
+                  <li><a href="#">Cherrapunji</a></li>
+                  <li><a href="#">Majuli</a></li>
+                </ul>
+              </div>
+            </div>
+      
+            <div class="col-sm-6 col-lg-2">
+              <div class="widget4">
+                <h5>Services</h5>
+                <ul>
+                  <li><a href="#">Self-Drive Rentals</a></li>
+                  <li><a href="#">Chauffeur Driven</a></li>
+                  <li><a href="#">Bike Rentals</a></li>
+                  <li><a href="#">Airport Transfers</a></li>
+                  <li><a href="#">City Tours</a></li>
+                  <li><a href="#">Outstation Rides</a></li>
+                </ul>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      
+        <div class="copyRightArea">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                <p>&copy; 2025 Jajabor. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="script.js"></script>
+      
+</body>
+</html>
