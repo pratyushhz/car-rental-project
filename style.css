@@ -1781,7 +1781,249 @@ h2 {
     padding:0;
 }
   
+
+/* SECTION BACKGROUND */
+#login-reg-section {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
   
+  /* CONTAINER */
+  #login-reg-section .container {
+    position: relative;
+    width: 850px;
+    height: 550px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  
+  /* USER WRAPPER */
+  #login-reg-section .user {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  /* IMAGE BOX */
+  #login-reg-section .imgBx {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px 0 0 15px;
+  }
+  
+  #login-reg-section .imgBx img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  /* FORM BOX */
+  #login-reg-section .formBx {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    border-radius: 0 15px 15px 0;
+  }
+  
+  /* FORM HEADINGS */
+  #login-reg-section .formBx form h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* INPUT FIELDS */
+  #login-reg-section .formBx form .input-field {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  #login-reg-section .formBx form .input-field input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+    font-size: 14px;
+    transition: 0.3s;
+    outline: none;
+  }
+  
+  #login-reg-section .formBx form .input-field input:focus {
+    border-color: #677eff;
+    background: #fff;
+  }
+  
+  /* ICONS IN INPUT */
+  #login-reg-section .formBx form .input-field i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 18px;
+  }
+  
+  /* SUBMIT BUTTON */
+  #login-reg-section .formBx form input[type='submit'] {
+    width: 100%;
+    padding: 12px;
+    background: #677eff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  #login-reg-section .formBx form input[type='submit']:hover {
+    background: #4055d4;
+  }
+  
+  /* SIGNUP LINK */
+  #login-reg-section .signup {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  #login-reg-section .signup a {
+    color: #677eff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  /* SIGNIN AND SIGNUP BOXES */
+  #login-reg-section .signupBx,
+  #login-reg-section .signinBx {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: 0.5s;
+  }
+  
+  /* By Default - Show Signin, Hide Signup */
+  #login-reg-section .signupBx {
+    left: 100%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #login-reg-section .signinBx {
+    left: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* When Active Class Added - Show Signup, Hide Signin */
+  #login-reg-section .container.active .signupBx {
+    left: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  #login-reg-section .container.active .signinBx {
+    left: -100%;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* IMG AND FORM SPLIT */
+  #login-reg-section .signupBx .formBx,
+  #login-reg-section .signinBx .formBx,
+  #login-reg-section .signupBx .imgBx,
+  #login-reg-section .signinBx .imgBx {
+    width: 50%;
+  }
+
+  /* DARK OVERLAY FOR IMAGE */
+#login-reg-section .imgBx {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Dark overlay with opacity */
+  #login-reg-section .imgBx::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: 1; /* Place the overlay behind the text */
+  }
+  
+  /* Text overlay (Heading and Subheading) */
+  #login-reg-section .imgBx .overlay-text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    z-index: 2; /* Keep text above the overlay */
+  }
+  
+  #login-reg-section .imgBx .overlay-text h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  
+  #login-reg-section .imgBx .overlay-text p {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  
+  
+  /* RESPONSIVE */
+  @media (max-width: 991px) {
+    #login-reg-section .container {
+      flex-direction: column;
+      height: auto;
+      width: 90%;
+    }
+  
+    #login-reg-section .imgBx {
+      display: none;
+    }
+  
+    #login-reg-section .formBx {
+      width: 100%;
+      border-radius: 15px;
+    }
+  
+    #login-reg-section .signupBx .formBx,
+    #login-reg-section .signinBx .formBx {
+      width: 100%;
+    }
+  }
+  
+
   
   
   
