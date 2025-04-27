@@ -13,6 +13,9 @@
     <link href="https://unpkg.com/pattern.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 
 </head>
@@ -22,7 +25,7 @@
        <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6">
-                <ul style="display: flex;">
+                <ul style="display: flex;margin-top: 5px;">
                     <li>Contact Us</li>
                     <li>Contact Us</li>
                     <li>Contact Us</li>
@@ -78,76 +81,66 @@
                         <a class="nav-link" href="#">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-outline-primary ms-lg-3" href="#">Login / Register</a>
+                        <a class="btn btn-outline-primary ms-lg-3" href="login-registration.html">Login / Register</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="p-0">
-        <div id="jajaborCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-
-                <!-- Slide 1 -->
-                <div class="carousel-item active"
-                    style="background: url('https://www.racv.com.au/royalauto/transport/cars/classic-cars-investment/_jcr_content/root/container/articlepagecontent/image.coreimg.jpeg/1628674722803/hsv-gtsr-range-1600x600.jpeg') no-repeat center center / cover;">
-                    <div
-                        class="d-flex align-items-center justify-content-center min-vh-100 text-white text-center flex-column overlay">
-                        <div class="welcome-text">
-                            <h2 class="display-6 fade-up">Welcome</h2>
-                            <h3 class="h2 fade-up delay-1">To</h3>
-                            <h1 class="display-3 fw-bold text-warning fade-up delay-2">JAJABOR</h1>
-                            <p class="fst-italic fade-up delay-3">"Where every journey begins with the perfect ride"</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="carousel-item" style="background: url('img/slide2.jpg') no-repeat center center / cover;">
-                    <div
-                        class="d-flex align-items-center justify-content-center min-vh-100 text-white text-center flex-column overlay">
-                        <div class="text w-75">
-                            <h1 class="display-5 fade-up">Looking for <br><span class="text-warning">Rent a car or
-                                    bike?</span></h1>
-                            <p class="lead fade-up delay-1">Choose from a wide range of well-maintained vehicles
-                                tailored to your needs.</p>
-                            <div class="app-images d-flex justify-content-center gap-3 fade-up delay-2">
-                                <img src="img/ios.png" alt="iOS App" width="100">
-                                <img src="img/512x512.png" alt="Android App" width="100">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="carousel-item" style="background: url('img/slide3.jpg') no-repeat center center / cover;">
-                    <div
-                        class="d-flex align-items-center justify-content-center min-vh-100 text-dark text-center flex-column overlay">
-                        <div class="form-container w-50 bg-white bg-opacity-75 p-4 rounded-4 shadow fade-up">
-                            <h2 class="mb-4">Book Your Ride</h2>
-                            <form>
-                                <div class="mb-3"><input type="search" class="form-control" placeholder="Search Places">
-                                </div>
-                                <div class="mb-3"><input type="date" class="form-control"></div>
-                                <div class="mb-3"><input type="date" class="form-control"></div>
-                                <input type="submit" value="Submit" class="btn btn-warning w-100">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
+    <section class="banner__slider p-0">
+        <div class="slider stick-dots">
+          <div class="slide">
+            <div class="slide__img">
+              <img src="https://carrentpk.com/img/slider-bg1.png" alt="" data-lazy="https://carrentpk.com/img/slider-bg1.png" class="full-image animated" data-animation-in="zoomInImage"/>
+              <div class="overlay"></div>
             </div>
-
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#jajaborCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#jajaborCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+            <div class="slide__content ">
+              <div class="slide__content--headings text-center">
+                 
+                 <p class="animated top-title" data-animation-in="fadeInUp" data-delay-in="0.3">Welcome to Jajabor</p>
+                          <h2 class="animated title" data-animation-in="fadeInUp">Explore Every Mile, Your Way</h2>
+                          <button class="btn-light btn button-custom animated" data-animation-in="fadeInUp">Call Us</button>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide__img">
+              <img src="https://www.nissanusa.com/content/dam/Nissan/us/rental-cars/nissan-rental-car-lineup-hero-v3.jpg.ximg.l_full_m.smart.jpg" alt="" data-lazy="https://www.nissanusa.com/content/dam/Nissan/us/rental-cars/nissan-rental-car-lineup-hero-v3.jpg.ximg.l_full_m.smart.jpg" class="full-image animated" data-animation-in="zoomOutImage" style="width: 100%;object-fit: cover;"/>
+              <div class="overlay"></div>
+            </div>
+            <div class="slide__content slide__content__right">
+              <div class="slide__content--headings text-right">
+                          <p class="animated top-title" data-animation-in="fadeInLeft" data-delay-in="0.2">Wheels of Freedom</p>
+                 <h2 class="animated title" data-animation-in="fadeInLeft">Rent. Ride. Roam Northeast.</h2>
+                 <button class="btn-success btn button-custom animated text-white" data-animation-in="fadeInUp">Call Us</button>
+              </div>
+            </div>
+          </div>
+              <div class="slide">
+            <div class="slide__img">
+              <img src="" alt="" data-lazy="https://lohithluxurycars.com/UpdatedImages/home_slider3.jpg" class="full-image animated" data-animation-in="zoomInImage"/>
+              <div class="overlay"></div>
+            </div>
+            <div class="slide__content slide__content__left">
+              <div class="slide__content--headings text-left">
+                          <p class="animated top-title" data-animation-in="fadeInRight" data-delay-in="0.2">Jajabor Journeys</p>
+                 <h2 class="animated title" data-animation-in="fadeInRight">Discover Northeast India on Wheels</h2>
+                 <button class="btn-light btn button-custom animated" data-animation-in="fadeInUp">Call Us</button>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44px" height="44px" id="circle" fill="none" stroke="currentColor">
+              <circle r="20" cy="22" cx="22" id="test">
+          </symbol>
+      </svg>
+      </section>
+      
+      
+      
+      
 
 
     <section class="about" id="about">
@@ -974,6 +967,10 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js"></script>
+   
+    
 
     <script>
         $('#jajaborCarousel').on('slide.bs.carousel', function () {
