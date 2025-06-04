@@ -2846,7 +2846,7 @@ ul, li {
     display:flex;
     gap:6px;
     align-items:center;
-    margin-bottom: 4px;
+    margin-bottom: 1px;
     padding: 5px 0px;
   }
   .top-nav {
@@ -2862,7 +2862,8 @@ ul, li {
   position: absolute;
   right: 0;
   }
-  .top-nav ul li {font-size:14px;}
+  .top-nav ul li {font-size: 16px;
+  color: #fff;}
   
   /* Responsive */
   @media (max-width: 768px) {
