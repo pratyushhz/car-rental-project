@@ -3148,3 +3148,6 @@ ul, li {
 .socialLinks {
     position: relative;
 }
+.socialLinks ul li:last-child {
+  margin-right: 10px;
+}
